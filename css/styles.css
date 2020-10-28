@@ -1,1 +1,7 @@
-alert('Hello World');
+body {
+  background-color: maroon;
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
