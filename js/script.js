@@ -24,14 +24,12 @@ let pokemonList = [
     abilities: ['Keen-eye','sniper']},
 ];
 
-function printArrayDetails(list){
-  for (let i = 0; i < list.length; i++) {
-    if(list[i].height > 1.4){
-      document.write('<p>' + list[i].name + ' (height: ' + list[i].height + 'm) -Oh my, that\'s huge! </p>')
+function myLoopFunction(pokemon) {
+    if(pokemon.height > 1.4){
+      document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + 'm) -Oh my, that\'s huge! </p>');
     } else {
-      document.write('<p>' + list[i].name + ' (height: ' + list[i].height + 'm) </p>')
+      document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + 'm) </p>');
     }
   }
-}
 
-printArrayDetails(pokemonList);
+pokemonList.forEach(myLoopFunction);
