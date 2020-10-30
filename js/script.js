@@ -27,7 +27,11 @@ let pokemonRepository = (function() {
   ];
 
   function add(pokemon) {
+    if (typeof pokemon === "object" && ("name", "height", "types", "abilities"  in pokemon)){
     pokemonList.push(pokemon);
+  } else {
+    console.log('Failed to add Pokemon');
+  }
   };
 
   function getAll() {
@@ -41,6 +45,14 @@ let pokemonRepository = (function() {
 })();
 
 
+pokemonRepository.add({
+      name: 'Pikachu',
+      height: 0.5,
+      types: ['lightning','Reynolds'],
+      abilities: ['Electrocution','Sass']
+    })
+
+
 
 pokemonRepository.getAll().forEach(function(pokemon) {
   let pokemonAttributes = pokemon.name + ' (height: ' + pokemon.height
@@ -49,4 +61,5 @@ pokemonRepository.getAll().forEach(function(pokemon) {
     } else {
       document.write('<p>' + pokemonAttributes + 'm) </p>');
     }
+
   }) ();
