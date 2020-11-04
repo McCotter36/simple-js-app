@@ -5,3 +5,11 @@ body {
   font-size: 22px;
   font-weight: bold;
 }
+
+.button-class {
+  font-family: monospace;
+  width: 200px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 10px;  
+}

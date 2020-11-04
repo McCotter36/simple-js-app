@@ -38,9 +38,21 @@ let pokemonRepository = (function() {
     return pokemonList;
   };
 
+  function addListItem(pokemon) {
+    let newList = document.querySelector(".pokemon-list");
+    let listItem = document.createElement('li');
+    let button = document.createElement('button');
+      button.innerText = pokemon.name;
+      button.classList.add('button-class');
+      listItem.appendChild(button);
+      newList.appendChild(listItem);
+    }
+
+
   return {
     add: add,
-    getAll: getAll
+    getAll: getAll,
+    addListItem: addListItem
   };
 })();
 
@@ -52,14 +64,7 @@ pokemonRepository.add({
       abilities: ['Electrocution','Sass']
     })
 
-
-
 pokemonRepository.getAll().forEach(function(pokemon) {
-  let pokemonAttributes = pokemon.name + ' (height: ' + pokemon.height
-    if(pokemon.height > 1.4){
-      document.write('<p>' + pokemonAttributes + 'm) -Oh my, that\'s huge! </p>');
-    } else {
-      document.write('<p>' + pokemonAttributes + 'm) </p>');
-    }
+  pokemonRepository.addListItem(pokemon);
 
   }) ();
