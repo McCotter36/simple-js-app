@@ -23,6 +23,12 @@ let pokemonRepository = (function() {
       height: 1.2,
       types: ['flying','normal'],
       abilities: ['Keen-eye','sniper']
+    },
+    {
+      name: 'Pikachu',
+      height: 0.4,
+      types: ['Electric'],
+      abilities: ['Static','Lightningrod']
     }
   ];
 
@@ -64,13 +70,6 @@ let pokemonRepository = (function() {
   };
 })();
 
-
-pokemonRepository.add({
-      name: 'Pikachu',
-      height: 0.5,
-      types: ['lightning','Reynolds'],
-      abilities: ['Electrocution','Sass']
-    })
 
 pokemonRepository.getAll().forEach(function(pokemon) {
   pokemonRepository.addListItem(pokemon);
