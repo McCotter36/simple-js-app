@@ -13,3 +13,7 @@ body {
   margin: 5px;
   border-radius: 10px;  
 }
+
+ul {
+  list-style-type: none;
+}
