@@ -1,5 +1,9 @@
-# simple-js-app
-Full Stack Development Project One <br>
-**Objective** <br>
-To build a small web application with HTML, CSS, and JavaScript that loads
-data from an external API and enables the viewing of data points in detail.
+# Pokedex App
+Full Stack Development: Project One 
+
+## Description
+A simple Pokemon app written primarily in vanila JavaScript with some JQuery. It uses the API from:
+
+`https://pokeapi.co/api/v2/pokemon/?limit=500`
+
+The app displays a list of the first 500 Pokemon in the database. The user can search Pokemon by name and click on each Pokemon to open a modal that displays more information. 
